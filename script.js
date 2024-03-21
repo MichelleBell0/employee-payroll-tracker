@@ -16,6 +16,8 @@ const collectEmployees = function() {
     // Check if the employee's salary entered is not a number, if it is not then salary defaults to 0
     if(isNaN(employeeSalary)){
       employeeSalary = 0;
+    } else {
+      employeeSalary = parseFloat(employeeSalary);
     }
     // Create an employee object using the employee information collected from the user prompts
     let employee = {
@@ -39,7 +41,7 @@ const displayAverageSalary = function(employeesArray) {
   let numOfEmployees = employeesArray.length;
   let totalSalary = 0;
   for (let i = 0; i < numOfEmployees; i++){
-    totalSalary += parseFloat(employeesArray[i].salary);
+    totalSalary += employeesArray[i].salary;
   }
   // Calculate the average salary between all the employees and log the information using template literals
   let averageSalary = (totalSalary / numOfEmployees);
