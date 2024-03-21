@@ -39,7 +39,7 @@ const displayAverageSalary = function(employeesArray) {
   let numOfEmployees = employeesArray.length;
   let totalSalary = 0;
   for (let i = 0; i < numOfEmployees; i++){
-    totalSalary += employeesArray[i].salary;
+    totalSalary += parseFloat(employeesArray[i].salary);
   }
   // Calculate the average salary between all the employees and log the information using template literals
   let averageSalary = (totalSalary / numOfEmployees);
